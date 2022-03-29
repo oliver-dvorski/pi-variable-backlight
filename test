@@ -1,0 +1,5 @@
+#!/bin/sh
+
+[ $(faketime 'today 7 ' ./main) -eq 20  ] && echo "Pass morning" || echo "Fail morning"
+[ $(faketime 'today 21' ./main) -eq 20  ] && echo "Pass evening" || echo "Fail evening"
+[ $(faketime 'today 12' ./main) -eq 255 ] && echo "Pass noon"    || echo "Fail noon"

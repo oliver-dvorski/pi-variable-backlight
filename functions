@@ -1,0 +1,18 @@
+#!/bin/sh
+
+function dim() {
+  echo 20
+}
+
+function brighten() {
+  echo 255
+}
+
+function isMorning() {
+  [ $(date +'%H') -lt 8 ]
+}
+
+function isEvening() {
+  [ $(date +'%H') -gt 20 ]
+}
+
